@@ -1,52 +1,183 @@
 import { ConnectWallet } from "@thirdweb-dev/react";
-import styles from "../styles/Home.module.css";
+import Navbar from "./Navbar";
 
 export default function Home() {
   return (
-    <div className={styles.container}>
-      <main className={styles.main}>
-        <h1 className={styles.title}>
-          Welcome to <a href="https://thirdweb.com/">thirdweb</a>!
-        </h1>
+   <>
+<Navbar/>
+<section className="dark:bg-gray-800 dark:text-gray-100 bg-black text-white">
+	<div className="container max-w-6xl p-6 mx-auto space-y-6 sm:space-y-12">
 
-        <p className={styles.description}>
-          Get started by configuring your desired network in{" "}
-          <code className={styles.code}>pages/_app.js</code>, then modify the{" "}
-          <code className={styles.code}>pages/index.js</code> file!
+		<div className="grid justify-center grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
+    <a href="#" className="group relative block bg-black">
+  <img
+    alt="Developer"
+    src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+    className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+  />
+
+  <div className="relative p-4 sm:p-6 lg:p-8">
+    <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
+      Developer
+    </p>
+
+    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+    <div className="mt-32 sm:mt-48 lg:mt-64">
+      <div
+        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+      >
+        <p className="text-sm text-white">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+          perferendis hic asperiores quibusdam quidem voluptates doloremque
+          reiciendis nostrum harum. Repudiandae?
         </p>
-
-        <div className={styles.connect}>
-          <ConnectWallet />
-        </div>
-
-        <div className={styles.grid}>
-          <a href="https://portal.thirdweb.com/" className={styles.card}>
-            <h2>Portal &rarr;</h2>
-            <p>
-              Guides, references and resources that will help you build with
-              thirdweb.
-            </p>
-          </a>
-
-          <a href="https://thirdweb.com/dashboard" className={styles.card}>
-            <h2>Dashboard &rarr;</h2>
-            <p>
-              Deploy, configure and manage your smart contracts from the
-              dashboard.
-            </p>
-          </a>
-
-          <a
-            href="https://portal.thirdweb.com/templates"
-            className={styles.card}
-          >
-            <h2>Templates &rarr;</h2>
-            <p>
-              Discover and clone template projects showcasing thirdweb features.
-            </p>
-          </a>
-        </div>
-      </main>
+      </div>
     </div>
+  </div>
+</a>
+
+<a href="#" className="group relative block bg-black">
+  <img
+    alt="Developer"
+    src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+    className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+  />
+
+  <div className="relative p-4 sm:p-6 lg:p-8">
+    <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
+      Developer
+    </p>
+
+    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+    <div className="mt-32 sm:mt-48 lg:mt-64">
+      <div
+        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+      >
+        <p className="text-sm text-white">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+          perferendis hic asperiores quibusdam quidem voluptates doloremque
+          reiciendis nostrum harum. Repudiandae?
+        </p>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="#" className="group relative block bg-black">
+  <img
+    alt="Developer"
+    src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+    className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+  />
+
+  <div className="relative p-4 sm:p-6 lg:p-8">
+    <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
+      Developer
+    </p>
+
+    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+    <div className="mt-32 sm:mt-48 lg:mt-64">
+      <div
+        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+      >
+        <p className="text-sm text-white">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+          perferendis hic asperiores quibusdam quidem voluptates doloremque
+          reiciendis nostrum harum. Repudiandae?
+        </p>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="#" className="group relative block bg-black">
+  <img
+    alt="Developer"
+    src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+    className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+  />
+
+  <div className="relative p-4 sm:p-6 lg:p-8">
+    <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
+      Developer
+    </p>
+
+    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+    <div className="mt-32 sm:mt-48 lg:mt-64">
+      <div
+        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+      >
+        <p className="text-sm text-white">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+          perferendis hic asperiores quibusdam quidem voluptates doloremque
+          reiciendis nostrum harum. Repudiandae?
+        </p>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="#" className="group relative block bg-black">
+  <img
+    alt="Developer"
+    src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+    className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+  />
+
+  <div className="relative p-4 sm:p-6 lg:p-8">
+    <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
+      Developer
+    </p>
+
+    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+    <div className="mt-32 sm:mt-48 lg:mt-64">
+      <div
+        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+      >
+        <p className="text-sm text-white">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+          perferendis hic asperiores quibusdam quidem voluptates doloremque
+          reiciendis nostrum harum. Repudiandae?
+        </p>
+      </div>
+    </div>
+  </div>
+</a>
+<a href="#" className="group relative block bg-black">
+  <img
+    alt="Developer"
+    src="https://images.unsplash.com/photo-1603871165848-0aa92c869fa1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=772&q=80"
+    className="absolute inset-0 h-full w-full object-cover opacity-75 transition-opacity group-hover:opacity-50"
+  />
+
+  <div className="relative p-4 sm:p-6 lg:p-8">
+    <p className="text-sm font-medium uppercase tracking-widest text-pink-500">
+      Developer
+    </p>
+
+    <p className="text-xl font-bold text-white sm:text-2xl">Tony Wayne</p>
+
+    <div className="mt-32 sm:mt-48 lg:mt-64">
+      <div
+        className="translate-y-8 transform opacity-0 transition-all group-hover:translate-y-0 group-hover:opacity-100"
+      >
+        <p className="text-sm text-white">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Omnis
+          perferendis hic asperiores quibusdam quidem voluptates doloremque
+          reiciendis nostrum harum. Repudiandae?
+        </p>
+      </div>
+    </div>
+  </div>
+</a>
+
+		</div>
+	
+	</div>
+</section>
+   </>
   );
 }
+
