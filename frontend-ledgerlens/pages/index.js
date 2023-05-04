@@ -1,10 +1,21 @@
-import { ConnectWallet,useConnectionStatus } from "@thirdweb-dev/react";
+import { ConnectWallet,useConnectionStatus,useContractRead,useContract } from "@thirdweb-dev/react";
 import Navbar from "./Navbar";
 import { motion } from "framer-motion";
 import Link from "next/link";
 import Home from "./Home";
-export default function Home0() {
+export default function HomeO() {
+
+  const {contract} = useContract("0xDa792D8D2895FF29eF9d3479BBcc43dA57642f33")
   
+  const loopingThroughArticles = async (i) => {
+  const {data : posts} = await useContractRead(contract,"Articles",[i])
+  console.log(posts[0],posts.creator)
+  }
+
+  for(let i=0;i<3;i++){
+    loopingThroughArticles(i)
+  }
+
 
 const connectionStatus = useConnectionStatus()
 console.log(connectionStatus)

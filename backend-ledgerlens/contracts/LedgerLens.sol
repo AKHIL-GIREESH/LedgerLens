@@ -13,10 +13,12 @@ contract LedgerLens{
 
     mapping(address => Article[]) ArticlesByCreator;
     mapping(address => Article[]) ArticlesReadByUser;
+    Article[] public Articles;
     // mapping(Article => address[]) UsersReadingArticles;
 
     function addArticle(string memory _title,string memory _body,string memory _ipfsImgUrl ) public{
         ArticlesByCreator[msg.sender].push(Article(_title,msg.sender, _body, _ipfsImgUrl,block.timestamp));
+        Articles.push(Article(_title,msg.sender, _body, _ipfsImgUrl,block.timestamp));   
     }
 
     function getArticle(address _creator) public view returns(Article[] memory){

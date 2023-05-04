@@ -3,7 +3,7 @@ import {useContract,useAddress, useStorageUpload, useContractWrite,Web3Button} f
 
 const Write = () => {
 
-  const {contract} = useContract("0xFAB701E6c7BbeBB3AEFe265F457911B20f786ca7")
+  const {contract} = useContract("0xDa792D8D2895FF29eF9d3479BBcc43dA57642f33")
   const address = useAddress()
   
   const [file,setFile] = useState()
@@ -42,17 +42,11 @@ const Write = () => {
       />
       <textarea placeholder='Start Typing' onChange={({target}) => setBody(target.value)}></textarea>
       <Web3Button
-      contractAddress= {"0xFAB701E6c7BbeBB3AEFe265F457911B20f786ca7"} // Your smart contract address
+      contractAddress= {"0xDa792D8D2895FF29eF9d3479BBcc43dA57642f33"} // Your smart contract address
       action={() => {
         setIpfsURL(()=>uploadToIpfs())
         console.log(ipfsURL[0])
-        mutateAsync({ args: [title,body,ipfsURL] })
-        setFile("")
-        setTitle("")
-        setBody("")
-        return(<>
-
-        </>)
+        return mutateAsync({ args: [title,body,ipfsURL] })
         }}
     >
       Submit
