@@ -1,6 +1,10 @@
 import React from 'react'
+import { useRouter } from 'next/router'
+
 
 const Navbar = () => {
+  const router = useRouter()
+
   return (
 <>
 <header aria-label="Site Header" className="border-b border-gray-100 bg-black text-white">
@@ -46,30 +50,10 @@ const Navbar = () => {
       <div className="flex items-center">
         <div className="flex items-center border-x border-gray-100 border-l-0 border-r-0">
 
-
-          <span>
-            <a
-              href="/Profile"
-              className="grid h-16 w-16 place-content-center border-l-0 border-b-4 border-transparent hover:border-red-700"
-            >
-              <svg
-                className="h-4 w-4"
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  stroke-width="2"
-                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
-                />
-              </svg>
-
-              <span className="sr-only"> Account </span>
-            </a>
+        <span className="hidden sm:block">
+           <button type="button" onClick={() => router.push('/Write')} className='px-4 rounded-3xl border mr-3 border-white'>Write</button>
           </span>
+       
 
           <span className="hidden sm:block">
             <a
@@ -92,6 +76,29 @@ const Navbar = () => {
               </svg>
 
               <span className="sr-only"> Search </span>
+            </a>
+          </span>
+          <span>
+            <a
+              href="/Profile"
+              className="grid h-16 w-16 place-content-center border-l-0 border-b-4 border-transparent hover:border-red-700"
+            >
+              <svg
+                className="h-4 w-4"
+                xmlns="http://www.w3.org/2000/svg"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"
+                />
+              </svg>
+
+              <span className="sr-only"> Account </span>
             </a>
           </span>
         </div>
