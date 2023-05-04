@@ -1,5 +1,7 @@
 import React from 'react'
 import { useRouter } from 'next/router'
+import Link from 'next/link'
+
 
 
 const Navbar = () => {
@@ -29,10 +31,10 @@ const Navbar = () => {
         </svg>
       </button>
 
-      <a href="#" className="flex">
+      <Link href="#" className="flex">
         <span className="sr-only">Logo</span>
         <span className="inline-block h-10 w-32 rounded-lg bg-gray-200"></span>
-      </a>
+      </Link>
     </div>
 
     <div className="flex flex-1 items-center justify-end gap-8">
@@ -56,7 +58,7 @@ const Navbar = () => {
        
 
           <span className="hidden sm:block">
-            <a
+            <Link
               href="/search"
               className="grid h-16 w-16 place-content-center border-b-4 border-transparent hover:border-red-700"
             >
@@ -76,10 +78,10 @@ const Navbar = () => {
               </svg>
 
               <span className="sr-only"> Search </span>
-            </a>
+            </Link>
           </span>
           <span>
-            <a
+            <Link
               href="/Profile"
               className="grid h-16 w-16 place-content-center border-l-0 border-b-4 border-transparent hover:border-red-700"
             >
@@ -99,7 +101,7 @@ const Navbar = () => {
               </svg>
 
               <span className="sr-only"> Account </span>
-            </a>
+            </Link>
           </span>
         </div>
       </div>
