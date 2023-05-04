@@ -1,8 +1,17 @@
-import { ConnectWallet } from "@thirdweb-dev/react";
+import { ConnectWallet,useConnectionStatus } from "@thirdweb-dev/react";
 import Navbar from "./Navbar";
-
 export default function Home() {
+  
+
+const connectionStatus = useConnectionStatus()
+console.log(connectionStatus)
+//   <ConnectWallet
+//   theme="dark"
+//   btnTitle="Connect Wallet"
+// />
+
   return (
+    (connectionStatus === "connected")?
    <>
 <Navbar/>
 <section className="dark:bg-gray-800 dark:text-gray-100 bg-black text-white">
@@ -177,6 +186,11 @@ export default function Home() {
 	
 	</div>
 </section>
+   </>:<>
+  <ConnectWallet
+  theme="dark"
+  btnTitle="Connect Wallet"
+/>
    </>
   );
 }
