@@ -1,6 +1,9 @@
 import { ConnectWallet,useConnectionStatus } from "@thirdweb-dev/react";
 import Navbar from "./Navbar";
-export default function Home() {
+import { motion } from "framer-motion";
+import Link from "next/link";
+import Home from "./Home";
+export default function Home0() {
   
 
 const connectionStatus = useConnectionStatus()
@@ -371,12 +374,7 @@ console.log(connectionStatus)
 	
 	</div>
 </section>
-   </>:<>
-  <ConnectWallet
-  theme="dark"
-  btnTitle="Connect Wallet"
-/>
-   </>
+   </>:<Home/>
   );
 }
 
