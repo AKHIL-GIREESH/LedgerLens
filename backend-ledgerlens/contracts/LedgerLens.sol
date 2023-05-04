@@ -31,9 +31,9 @@ contract LedgerLens{
         return ArticlesReadByUser[msg.sender];
     }
 
-    function addArticleRead() public{
+    // function addArticleRead() public{
 
-    }
+    // }
 
     // function getArticleRead() public{
 
