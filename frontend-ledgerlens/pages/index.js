@@ -12,6 +12,11 @@ export default function HomeO() {
   console.log(posts[0],posts.creator)
   }
 
+  //post0 --> Heading
+  //posts1 --> url link
+  //posts2 --> Body
+  //posts.creator --> address of the creator
+
   for(let i=0;i<3;i++){
     loopingThroughArticles(i)
   }
