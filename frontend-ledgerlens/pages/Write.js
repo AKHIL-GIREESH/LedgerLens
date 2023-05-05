@@ -25,7 +25,7 @@ const Write = () => {
     })
     
     console.log("Upload URL",uploadURL)
-    return uploadURL
+    setIpfsURL(uploadURL)
   }
 
   const { mutateAsync, isLoading, error } = useContractWrite(
@@ -83,14 +83,20 @@ const Write = () => {
       className="bg-gray-600 border-gray-300 rounded-md p-4 w-full h-52 border-0 focus:border-0 border-transparent focus:border-transparent focus:ring-0  mb-4"
     ></textarea>
     <div clasNames=" flex overflow-hidden bg-white border divide-x rounded-lg rtl:flex-row-reverse dark:bg-gray-900 dark:border-gray-700 dark:divide-gray-700">
-    <button  className="mb-5 flex items-center px-4 py-2 text-sm font-medium text-gray-600 transition-colors duration-200 sm:text-base sm:px-6 dark:hover:bg-gray-800 dark:text-gray-300 gap-x-3 hover:bg-gray-100">
+    <Web3Button
+      contractAddress= {"0x0d3ad4087aEB8a608bD5c6C51EE24b34b44e243B"} // Your smart contract address
+      action={() => {
+        uploadToIpfs()
+        return mutateAsync({ args: [title,body,ipfsURL[0]] })
+        }}
+        className="mb-5 flex items-center px-4 py-2 text-sm font-medium text-gray-600 transition-colors duration-200 sm:text-base sm:px-6 dark:hover:bg-gray-800 dark:text-gray-300 gap-x-3 hover:bg-gray-100">
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-5 h-5 sm:w-6 sm:h-6">
             <path stroke-linecap="round" stroke-linejoin="round" d="M12 16.5V9.75m0 0l3 3m-3-3l-3 3M6.75 19.5a4.5 4.5 0 01-1.41-8.775 5.25 5.25 0 0110.233-2.33 3 3 0 013.758 3.848A3.752 3.752 0 0118 19.5H6.75z" />
         </svg>
 
-        <span>Upload</span>
+        <span>Publish</span>
         
-    </button>
+    </Web3Button>
 
 </div>
  
