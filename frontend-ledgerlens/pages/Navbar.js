@@ -31,7 +31,7 @@ const Navbar = () => {
         </svg>
       </button>
 
-      <Link href="#" className="flex">
+      <Link href="/" className="flex">
         <span className="sr-only">Logo</span>
         <span className="inline-block h-10 w-32 rounded-lg bg-gray-200"></span>
       </Link>
@@ -52,9 +52,22 @@ const Navbar = () => {
       <div className="flex items-center">
         <div className="flex items-center border-x border-gray-100 border-l-0 border-r-0">
 
-        <span className="hidden sm:block">
-           <button type="button" onClick={() => router.push('/Write')} className='px-4 rounded-3xl border mr-3 border-white'>Write</button>
-          </span>
+    
+          <button onClick={() => router.push('/Write')}
+  class="group relative inline-block overflow-hidden border border-indigo-600 px-8 py-2 rounded-xl focus:outline-none focus:ring"
+  href="/download"
+>
+  <span
+    class="absolute inset-y-0 left-0 w-[2px] bg-indigo-600 transition-all group-hover:w-full group-active:bg-indigo-500"
+  ></span>
+
+  <span
+    class="relative text-sm font-medium text-indigo-600 transition-colors group-hover:text-white"
+  >
+    Write
+  </span>
+</button>
+          
        
 
           <span className="hidden sm:block">
