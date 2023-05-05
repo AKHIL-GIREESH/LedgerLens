@@ -403,20 +403,14 @@ import Home from "./Home";
 
 export default function HomeO() {
 
-  const {contract} = useContract("0xDa792D8D2895FF29eF9d3479BBcc43dA57642f33")
-  
-  const {data : posts0} = useContractRead(contract,"Articles",[0])
-  const {data : posts1} = useContractRead(contract,"Articles",[1])
-  const {data : posts2} = useContractRead(contract,"Articles",[2])
+  const {contract} = useContract("0x0d3ad4087aEB8a608bD5c6C51EE24b34b44e243B")
+  const { data, isLoading, error } = useContractRead(contract, "returnAllTheArticles");
+  data.map()
 
-  console.log(posts1)
-
-
-  //post0 --> Heading
-  //posts1 --> url link
-  //posts2 --> Body
-  //posts.creator --> address of the creator
-
+  //0 --> Heading
+  //1 --> Creator Address
+  //2 --> Body
+  //3 --> ipfs url (URL has some issues, so use this URL for everything --> https://ipfs.thirdwebcdn.com/ipfs/QmaqiPvdrM7yytunSiGRdNfiEFXA5edhnhQNYXkSMKGiho/ )
 
 const connectionStatus = useConnectionStatus()
 console.log(connectionStatus)
