@@ -27,17 +27,15 @@ const Home = () => {
 
       <div className="mt-8 flex flex-wrap justify-center gap-4">
 
-        {/* <button
-          className="animate-bounce block w-full rounded-3xl border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
+        <div
+          className="animate-bounce cursor-pointer block w-full rounded-3xl border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
           href="/about"
         >
-          Connect to Wallet
-        </button> */}
-        <ConnectWallet
-          className="animate-bounce block w-full rounded-3xl border border-blue-600 px-12 py-3 text-sm font-medium text-white hover:bg-blue-600 focus:outline-none focus:ring active:bg-blue-500 sm:w-auto"
-          theme="dark"
-          btnTitle="Connect Wallet"
-        />
+          <ConnectWallet style={{ backgroundColor: "transparent", color:"white" }}>
+            
+            Connect to Wallet
+            </ConnectWallet>
+        </div>
       </div>
     </div>
   </div>
